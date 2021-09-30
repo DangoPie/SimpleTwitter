@@ -12,7 +12,7 @@ public class User {
     public String screenName;
     public String profileImageUrl;
 
-    public static Tweet fromJson(JSONObject jsonObject) throws JSONException {
+    public static User fromJson(JSONObject jsonObject) throws JSONException {
         User user = new User();
         user.name = jsonObject.getString("name");
         user.screenName = jsonObject.getString("screen_name");
@@ -20,11 +20,4 @@ public class User {
         return user;
     }
 
-    public static List<Tweet> fromJsonArray(JSONArray jsonArray) throws JSONException {
-        List<Tweet> tweets = new ArrayList<>();
-        for(int i = 0; i < jsonArray.length(); i ++){
-            tweets.add(fromJson(jsonArray.getJSONObject(i)));
-        }
-        return tweets;
-    }
 }
