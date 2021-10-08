@@ -7,28 +7,46 @@
     android:layout_height="match_parent"
     tools:context=".ComposeActivity">
 
-    <EditText
-        android:id="@+id/compose"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="5dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="@string/what_s_happening"
-        android:inputType="textMultiLine"
-        android:minLines="5" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="140">
 
-    <Button
-        android:id="@+id/btnTweet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/compose"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="5dp"
-        android:text="@string/tweet" />
+        <EditText
+            android:id="@+id/compose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/what_s_happening"
+            android:inputType="textMultiLine"
+            android:minLines="5" />
+
+        <Button
+            android:id="@+id/btnTweet"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/compose"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/tweet" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 </RelativeLayout>
+
